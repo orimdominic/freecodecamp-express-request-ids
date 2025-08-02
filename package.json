@@ -11,7 +11,11 @@
   },
   "author": "Orim Dominic Adah <orimdominic@gmail.com>",
   "license": "ISC",
-  "keywords": ["express", "ids", "async context"],
+  "keywords": [
+    "express",
+    "ids",
+    "async context"
+  ],
   "dependencies": {
     "express": "^5.1.0"
   }
