@@ -1,5 +1,6 @@
 const winston = require("winston");
 const morgan = require("morgan");
+const { context } = require("./context");
 
 const { combine, errors, json, timestamp, colorize } = winston.format;
 
@@ -7,6 +8,10 @@ const logHandler = winston.createLogger({
   level: "debug",
   levels: winston.config.npm.levels,
   format: combine(
+    winston.format((info) => {
+      info.request_id = context().getStore()?.requestId;
+      return info;
+    })(),
     timestamp({ format: "YYYY-MM-DD hh:mm:ss.SSS A" }),
     errors({ stack: true }),
     json({ space: 2 }),
