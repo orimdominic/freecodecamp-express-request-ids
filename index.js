@@ -1,9 +1,11 @@
 const express = require("express");
+const { setRequestId } = require("./middleware");
 const { logRequestSummary, logger } = require("./logger");
 
 const app = express();
 
 app.use(
+  setRequestId(), // set as first middleware
   express.json(),
   express.urlencoded({ extended: true }),
   logRequestSummary
