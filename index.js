@@ -1,9 +1,11 @@
 const express = require("express");
 const { logRequestSummary, logger } = require("./logger");
+const { setRequestId } = require("./set-request-id");
 
 const app = express();
 
 app.use(
+  setRequestId(),
   express.json(),
   express.urlencoded({ extended: true }),
   logRequestSummary
