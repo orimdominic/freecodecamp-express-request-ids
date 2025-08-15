@@ -13,6 +13,8 @@
   "license": "ISC",
   "keywords": ["express", "ids", "async context"],
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "winston": "^3.17.0"
   }
 }
