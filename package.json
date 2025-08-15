@@ -1,0 +1,18 @@
+{
+  "name": "express-request-ids",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "description": "FreeCodeCamp unique IDs for Express requests tutorial code",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Orim Dominic Adah <orimdominic@gmail.com>",
+  "license": "ISC",
+  "keywords": ["express", "ids", "async context"],
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
